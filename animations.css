@@ -1,0 +1,88 @@
+/*from right*/
+
+@keyframes fromRight {
+    from {
+        opacity: 0;
+        transform: translate3d(200px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fromRight {
+    animation-name: fromRight;
+}
+
+/*from right bottom*/
+
+@keyframes fromRightBottom {
+    from {
+        opacity: 0;
+        transform: translate3d(50%, 50%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fromRightBottom {
+    animation-name: fromRightBottom;
+}
+
+/*from left*/
+
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fromLeft {
+    animation-name: fromLeft;
+}
+
+/*roll in*/
+
+@keyframes rollIn {
+    from {
+        opacity: 0;
+        transform: translate3d(-50%, 0, 0) rotate3d(0, 0, 1, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 45deg);
+    }
+}
+
+.rollIn {
+    animation-name: rollIn;
+}
+
+/*animations*/
+
+.animation {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animationSlow {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.animationFast {
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}

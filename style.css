@@ -1,0 +1,243 @@
+/*font-family: 'Lato', sans-serif;*/
+
+:root {
+    /*    main bg color*/
+    --white: rgb(255, 253, 248);
+    --whiteO: rgba(255, 253, 248, .85);
+    --black: rgb(0, 30, 45);
+
+    /*    light blue color*/
+    --lbc: rgb(147, 178, 172);
+    --lbcO: rgba(147, 178, 172, .5);
+    /*    dark blue color*/
+    --dbc: rgb(88, 110, 110);
+    /*    brown color*/
+    --bnc: rgb(185, 100, 64);
+    /*    yellow color*/
+    --yc: rgb(203, 132, 66);
+    /*    --dyc: rgb(118, 48, 14);*/
+    --dyc: rgb(14, 8, 6);
+}
+
+* {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Lato', sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*    NAV*/
+
+nav {
+    background: var(--white);
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    z-index: 5;
+    border-bottom: 3px solid var(--yc);
+
+
+}
+
+nav .logo {
+    background: var(--white);
+    height: 40px;
+    width: 130px;
+    float: left;
+    border: 2px solid var(--black);
+    margin: 10px;
+    text-transform: uppercase;
+    font-size: 26px;
+    text-align: center;
+    line-height: inherit;
+    color: var(--black);
+}
+
+nav .logo p span {
+    margin-left: 7px;
+    font-family: 'Dancing Script', cursive;
+    text-transform: none;
+
+}
+
+nav ul {
+    float: right;
+    margin-right: 200px;
+    margin-left: auto;
+    padding: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    border-right: 1px solid var(--dbc);
+}
+
+nav ul li a {
+    display: block;
+    font-size: 20px;
+    color: var(--dbc);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 20px;
+
+
+
+}
+
+nav ul li:last-child {
+    border-right: none;
+}
+
+nav ul li a:hover {
+
+    color: var(--black);
+
+}
+
+nav ul li:first-child a:hover {
+
+    color: var(--yc);
+
+}
+
+/*    section 1*/
+
+.section1 {
+    position: relative;
+    padding-top: 40px;
+    background: linear-gradient(45deg, var(--white)50%, var(--dbc)50%);
+    min-height: 120vh;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.section1 .textBox {
+    padding: 20px;
+    position: absolute;
+    color: var(--black);
+    background: var(--whiteO);
+    top: 30vh;
+    left: 55vw;
+    min-height: 40vh;
+    width: 30vw;
+    z-index: 2;
+    border: 10px solid var(--white);
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+}
+
+/*
+.section1 .textBox {
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    background: transparent;
+}
+*/
+
+.section1 div:first-child {
+    position: absolute;
+    top: 20vh;
+    left: 10vh;
+    width: 70vw;
+    height: 95vh;
+    background: url("main.jpg") center;
+    background-size: cover;
+    border: 10px solid var(--white);
+    z-index: 2;
+}
+
+.section1 div:last-child {
+    position: fixed;
+    top: 25vh;
+    left: 4vw;
+    width: 90vh;
+    height: 90vh;
+    background-color: transparent;
+    background-image: linear-gradient(0deg, var(--black) 1px, transparent 2px), linear-gradient(90deg, var(--black) 1px, transparent 0);
+    background-size: 15px 15px;
+    /*
+    background: url("main.jpg") center;
+    background-size: cover;
+*/
+    border: none;
+    z-index: 1;
+}
+
+/*    section 2*/
+
+.section2 {
+    height: 120vh;
+    position: relative;
+    background-image: linear-gradient(135deg, var(--white)50%, var(--black)50%);
+    overflow: hidden;
+}
+
+/*section 2 zdjecie*/
+
+.section2 aside {
+    width: 50%;
+    min-height: 120vh;
+    float: left;
+}
+
+/*zdjecie*/
+
+.section2 aside div:first-child {
+    position: absolute;
+    margin-top: 8vh;
+    width: 85vw;
+    height: 60vw;
+    background: url("img1.jpg") center;
+    background-size: cover;
+    background-attachment: fixed;
+    border: 10px solid var(--white);
+    z-index: 2;
+}
+
+/*section2 text*/
+
+.section2 main {
+    width: 50%;
+    min-height: 120vh;
+    color: var(--black);
+    float: left;
+    text-align: justify;
+
+}
+
+/*text*/
+
+.section2 main .about {
+    position: absolute;
+    top: 30vh;
+    right: 7vh;
+    width: 40%;
+    padding: 50px;
+    margin-right: 10vh;
+    color: var(--black);
+    background: var(--white);
+    z-index: 3;
+    border-left: 5px solid var(--yc);
+}
+
+.section2 main .about h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    color: var(--yc);
+
+}
+
+.section2 main .about p {
+    padding: 10px;
+}
